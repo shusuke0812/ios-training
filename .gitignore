@@ -1,6 +1,12 @@
+# MAC PC
 .DS_Store
+
+# iOS App
 /.build
 /Packages
 /*.xcodeproj
 xcuserdata/
 DerivedData/
+
+# vim
+*.swp
