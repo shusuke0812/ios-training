@@ -9,11 +9,11 @@ import UIKit
 
 class TopViewController: UIViewController {
 
+    // BaseView
+    private var baseView: TopBaseView { self.view as! TopBaseView }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 

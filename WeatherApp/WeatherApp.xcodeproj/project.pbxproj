@@ -15,6 +15,7 @@
 		9C02E5372622FFD10022AB46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C02E5352622FFD10022AB46 /* LaunchScreen.storyboard */; };
 		9C02E5422622FFD10022AB46 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02E5412622FFD10022AB46 /* WeatherAppTests.swift */; };
 		9C02E54D2622FFD10022AB46 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02E54C2622FFD10022AB46 /* WeatherAppUITests.swift */; };
+		9C02E56A262343B30022AB46 /* TopBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02E569262343B30022AB46 /* TopBaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9C02E5482622FFD10022AB46 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C02E54C2622FFD10022AB46 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		9C02E54E2622FFD10022AB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C02E569262343B30022AB46 /* TopBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		9C02E5292622FFCF0022AB46 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C02E568262343A50022AB46 /* View */,
 				9C02E567262303BD0022AB46 /* Repository */,
 				9C02E566262303B50022AB46 /* Entity */,
 				9C02E565262303AB0022AB46 /* ViewModel */,
@@ -166,6 +169,14 @@
 			children = (
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		9C02E568262343A50022AB46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C02E569262343B30022AB46 /* TopBaseView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C02E52F2622FFCF0022AB46 /* TopViewController.swift in Sources */,
+				9C02E56A262343B30022AB46 /* TopBaseView.swift in Sources */,
 				9C02E52B2622FFCF0022AB46 /* AppDelegate.swift in Sources */,
 				9C02E52D2622FFCF0022AB46 /* SceneDelegate.swift in Sources */,
 			);
