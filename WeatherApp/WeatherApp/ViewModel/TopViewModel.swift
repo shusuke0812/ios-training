@@ -34,8 +34,10 @@ extension TopViewModel {
             switch response {
             case .success(let weather):
                 print("DEBUG: ", weather)
+                self.delegate?.didSuccessWeatherInfo()
             case .failure(let error):
                 print("DEBUG: ", error)
+                self.delegate?.didFailedWeatherInfo(errorMessage: error.localizedDescription)
             }
         }
     }
