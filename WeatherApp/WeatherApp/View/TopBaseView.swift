@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TopBaseViewDelegate: AnyObject {
+    func didTapReloadButton()
+}
+
 class TopBaseView: UIView {
     
     @IBOutlet weak var weatherImageView: UIImageView!
@@ -15,10 +19,32 @@ class TopBaseView: UIView {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var reloadButton: UIButton!
     
+    /// デリゲート
+    weak var delegate: TopBaseViewDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    // MARK: - Action Method
+    @IBAction func didTapReloadButton(_ sender: Any) {
+        self.delegate?.didTapReloadButton()
     }
 }
 // MARK: - Initialized Method
 extension TopBaseView {
+}
+// MARK: - Setting UI Method
+extension TopBaseView {
+    func setWeatherImageView(weather: WeatherResponse?) {
+        if let weather = weather {
+            switch weather.weather {
+            case .cloudy:
+                self.weatherImageView.image = UIImage(named: "cloudy")
+            case .rainy:
+                self.weatherImageView.image = UIImage(named: "rainy")
+            case .sunny:
+                self.weatherImageView.image = UIImage(named: "sunny")
+            }
+        }
+    }
 }
