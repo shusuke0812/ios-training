@@ -33,3 +33,18 @@ class TopBaseView: UIView {
 // MARK: - Initialized Method
 extension TopBaseView {
 }
+// MARK: - Setting UI Method
+extension TopBaseView {
+    func setWeatherImageView(weather: WeatherResponse?) {
+        if let weather = weather {
+            switch weather.weather {
+            case .cloudy:
+                self.weatherImageView.image = UIImage(named: "cloudy")
+            case .rainy:
+                self.weatherImageView.image = UIImage(named: "rainy")
+            case .sunny:
+                self.weatherImageView.image = UIImage(named: "sunny")
+            }
+        }
+    }
+}
