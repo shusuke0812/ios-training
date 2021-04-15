@@ -17,9 +17,11 @@ protocol TopViewModelDelegate: AnyObject {
 class TopViewModel: NSObject {
     /// 天気情報取得リポジトリ
     private let weatherRepository: WeatherRepositoryProtocol
-    // 天気情報
+    // 天気情報リクエスト
     private(set) var area = "tokyo"
     private(set) var date = Date()
+    /// 天気情報
+    var weather: WeatherResponse?
     /// デリゲート
     weak var delegate: TopViewModelDelegate?
     
@@ -33,10 +35,9 @@ extension TopViewModel {
         self.weatherRepository.fetchWeather(at: self.area, date: self.date) { response in
             switch response {
             case .success(let weather):
-                print("DEBUG: ", weather)
+                self.weather = weather
                 self.delegate?.didSuccessWeatherInfo()
             case .failure(let error):
-                print("DEBUG: ", error)
                 self.delegate?.didFailedWeatherInfo(errorMessage: error.localizedDescription)
             }
         }
