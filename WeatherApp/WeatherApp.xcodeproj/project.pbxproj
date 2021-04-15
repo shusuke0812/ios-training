@@ -22,6 +22,7 @@
 		9C8E429A2623F5EB00B99DC4 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E42992623F5EB00B99DC4 /* Weather.swift */; };
 		9C8E429F2623F67000B99DC4 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E429E2623F67000B99DC4 /* WeatherError.swift */; };
 		9C8E42A42623F78400B99DC4 /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E42A32623F78400B99DC4 /* WeatherRepository.swift */; };
+		9C9E910C26281911002ADEC7 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E910B26281911002ADEC7 /* TopViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9C8E42992623F5EB00B99DC4 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9C8E429E2623F67000B99DC4 /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
 		9C8E42A32623F78400B99DC4 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
+		9C9E910B26281911002ADEC7 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		9C02E565262303AB0022AB46 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				9C9E910B26281911002ADEC7 /* TopViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			files = (
 				9C8E42A42623F78400B99DC4 /* WeatherRepository.swift in Sources */,
 				9C02E52F2622FFCF0022AB46 /* TopViewController.swift in Sources */,
+				9C9E910C26281911002ADEC7 /* TopViewModel.swift in Sources */,
 				9C8E42952623F59B00B99DC4 /* WeatherResponse.swift in Sources */,
 				9C02E56A262343B30022AB46 /* TopBaseView.swift in Sources */,
 				9C02E52B2622FFCF0022AB46 /* AppDelegate.swift in Sources */,
