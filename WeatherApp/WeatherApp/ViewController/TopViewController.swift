@@ -8,12 +8,20 @@
 import UIKit
 
 class TopViewController: UIViewController {
-
-    // BaseView
+    /// BaseView
     private var baseView: TopBaseView { self.view as! TopBaseView }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
-
+extension TopViewController {
+    private func setDelegate() {
+        self.baseView.delegate = self
+    }
+}
+// MARK: - BaseView Delegate Method
+extension TopViewController: TopBaseViewDelegate {
+    func didTapReloadButton() {
+    }
+}

@@ -63,6 +63,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyA-VE-fnu">
                                 <rect key="frame" x="235.5" y="642" width="47" height="30"/>
                                 <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="didTapReloadButton:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="nJJ-hy-Sxb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
