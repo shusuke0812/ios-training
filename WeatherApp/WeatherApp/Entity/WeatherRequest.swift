@@ -8,6 +8,6 @@
 import Foundation
 
 struct WeatherRequest: Encodable {
-    let ara: String
+    let area: String
     let date: Date
 }
