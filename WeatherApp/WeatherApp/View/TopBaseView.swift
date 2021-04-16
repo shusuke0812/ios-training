@@ -39,11 +39,14 @@ extension TopBaseView {
         if let weather = weather {
             switch weather.weather {
             case .cloudy:
-                self.weatherImageView.image = UIImage(named: "cloudy")
+                self.weatherImageView.image = UIImage(named: "cloudy")?.withRenderingMode(.alwaysTemplate)
+                self.weatherImageView.tintColor = .lightGray
             case .rainy:
-                self.weatherImageView.image = UIImage(named: "rainy")
+                self.weatherImageView.image = UIImage(named: "rainy")?.withRenderingMode(.alwaysTemplate)
+                self.weatherImageView.tintColor = .blue
             case .sunny:
-                self.weatherImageView.image = UIImage(named: "sunny")
+                self.weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
+                self.weatherImageView.tintColor = .red
             }
         }
     }
