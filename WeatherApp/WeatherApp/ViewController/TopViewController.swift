@@ -40,6 +40,6 @@ extension TopViewController: TopViewModelDelegate {
         }
     }
     func didFailedWeatherInfo(errorMessage: String) {
-        print(errorMessage)
+        print("DEBUG: ", errorMessage)
     }
 }
