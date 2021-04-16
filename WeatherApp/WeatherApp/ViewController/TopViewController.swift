@@ -40,6 +40,9 @@ extension TopViewController: TopViewModelDelegate {
         }
     }
     func didFailedWeatherInfo(errorMessage: String) {
-        print(errorMessage)
+        print("DEBUG: ", errorMessage)
+        DispatchQueue.main.async {
+            UIAlertController.showAlert(style: .alert, viewController: self, title: errorMessage, message: nil, okButtonTitle: "OK", cancelButtonTitle: nil)
+        }
     }
 }

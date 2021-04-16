@@ -36,7 +36,7 @@ extension WeatherRepository {
         
         let requestData = try encoder.encode(request)
         guard let requestJsonString = String(data: requestData, encoding: .utf8) else {
-            throw WeatherError.jsonDecodeError
+            throw WeatherError.jsonEncodeError
         }
         return requestJsonString
     }

@@ -38,7 +38,7 @@ extension TopViewModel {
                 self.weather = weather
                 self.delegate?.didSuccessWeatherInfo()
             case .failure(let error):
-                self.delegate?.didFailedWeatherInfo(errorMessage: error.localizedDescription)
+                self.delegate?.didFailedWeatherInfo(errorMessage: error.descrption())
             }
         }
     }
