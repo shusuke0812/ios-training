@@ -35,6 +35,7 @@ extension TopBaseView {
 }
 // MARK: - Setting UI Method
 extension TopBaseView {
+    /// 天気イメージを設定する
     func setWeatherImageView(weather: WeatherResponse?) {
         if let weather = weather {
             switch weather.weather {
@@ -48,6 +49,13 @@ extension TopBaseView {
                 self.weatherImageView.image = UIImage(named: "sunny")?.withRenderingMode(.alwaysTemplate)
                 self.weatherImageView.tintColor = .red
             }
+        }
+    }
+    /// 最低気温・最高気温を設定する
+    func setTemperature(weather: WeatherResponse?) {
+        if let weather = weather {
+            self.minTemperatureLabel.text = "\(weather.minTemp)"
+            self.maxTemperatureLabel.text = "\(weather.maxTemp)"
         }
     }
 }

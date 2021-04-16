@@ -37,6 +37,7 @@ extension TopViewController: TopViewModelDelegate {
     func didSuccessWeatherInfo() {
         DispatchQueue.main.async {
             self.baseView.setWeatherImageView(weather: self.viewModel.weather)
+            self.baseView.setTemperature(weather: self.viewModel.weather)
         }
     }
     func didFailedWeatherInfo(errorMessage: String) {
