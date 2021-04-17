@@ -31,6 +31,9 @@ extension TopViewController: TopBaseViewDelegate {
     func didTapReloadButton() {
         self.viewModel.getWeatherInfo()
     }
+    func didTapCloseButton() {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 // MARK: - ViewModel Delegate Method
 extension TopViewController: TopViewModelDelegate {

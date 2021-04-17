@@ -9,6 +9,7 @@ import UIKit
 
 protocol TopBaseViewDelegate: AnyObject {
     func didTapReloadButton()
+    func didTapCloseButton()
 }
 
 class TopBaseView: UIView {
@@ -28,6 +29,9 @@ class TopBaseView: UIView {
     // MARK: - Action Method
     @IBAction func didTapReloadButton(_ sender: Any) {
         self.delegate?.didTapReloadButton()
+    }
+    @IBAction func didTapCloseButton(_ sender: Any) {
+        self.delegate?.didTapCloseButton()
     }
 }
 // MARK: - Initialized Method
