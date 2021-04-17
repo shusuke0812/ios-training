@@ -17,13 +17,19 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
         self.viewModel = TopViewModel(weatherRepository: WeatherRepository())
         self.setDelegate()
+        self.loadWeatherInfoWhenReturnedBackground()
     }
 }
-// MARK: - Initialization
+// MARK: - Initialization / Private Method
 extension TopViewController {
     private func setDelegate() {
         self.baseView.delegate = self
         self.viewModel.delegate = self
+    }
+    private func loadWeatherInfoWhenReturnedBackground() {
+        NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { _ in
+            self.viewModel.getWeatherInfo()
+        }
     }
 }
 // MARK: - BaseView Delegate Method
