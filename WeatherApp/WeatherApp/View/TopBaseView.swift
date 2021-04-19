@@ -19,12 +19,14 @@ class TopBaseView: UIView {
     @IBOutlet weak var maxTemperatureLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var reloadButton: UIButton!
+    @IBOutlet weak var weatherActivityIndicatorView: UIActivityIndicatorView!
     
     /// デリゲート
     weak var delegate: TopBaseViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.initUI()
     }
     // MARK: - Action Method
     @IBAction func didTapReloadButton(_ sender: Any) {
@@ -36,6 +38,9 @@ class TopBaseView: UIView {
 }
 // MARK: - Initialized Method
 extension TopBaseView {
+    private func initUI() {
+        self.weatherActivityIndicatorView.isHidden = true
+    }
 }
 // MARK: - Setting UI Method
 extension TopBaseView {
@@ -61,5 +66,15 @@ extension TopBaseView {
             self.minTemperatureLabel.text = "\(weather.minTemp)"
             self.maxTemperatureLabel.text = "\(weather.maxTemp)"
         }
+    }
+    /// ActivityIndicatorを表示
+    func startActivityIndicator() {
+        self.weatherActivityIndicatorView.isHidden = false
+        self.weatherActivityIndicatorView.startAnimating()
+    }
+    /// ActivityIndicatorを終了
+    func endActivityIndicator() {
+        self.weatherActivityIndicatorView.stopAnimating()
+        self.weatherActivityIndicatorView.isHidden = true
     }
 }

@@ -44,10 +44,10 @@
                                     <constraint firstItem="YvC-ZQ-gSl" firstAttribute="width" secondItem="W5G-q1-hoz" secondAttribute="width" multiplier="0.5" id="74r-WR-lNh"/>
                                     <constraint firstAttribute="trailing" secondItem="W5G-q1-hoz" secondAttribute="trailing" id="8BO-y3-NBL"/>
                                     <constraint firstItem="UXt-j1-8NN" firstAttribute="top" secondItem="W5G-q1-hoz" secondAttribute="bottom" id="Ai6-qp-O2d"/>
-                                    <constraint firstItem="UXt-j1-8NN" firstAttribute="leading" secondItem="YvC-ZQ-gSl" secondAttribute="trailing" id="CUB-p3-KYL"/>
-                                    <constraint firstItem="UXt-j1-8NN" firstAttribute="leading" secondItem="YvC-ZQ-gSl" secondAttribute="trailing" id="Mpw-aT-rLk"/>
+                                    <constraint firstItem="UXt-j1-8NN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YvC-ZQ-gSl" secondAttribute="trailing" id="CUB-p3-KYL"/>
+                                    <constraint firstItem="UXt-j1-8NN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YvC-ZQ-gSl" secondAttribute="trailing" id="Mpw-aT-rLk"/>
                                     <constraint firstAttribute="bottom" secondItem="UXt-j1-8NN" secondAttribute="bottom" id="X4C-MC-xjy"/>
-                                    <constraint firstAttribute="trailing" secondItem="UXt-j1-8NN" secondAttribute="trailing" id="XK8-8C-fdx"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UXt-j1-8NN" secondAttribute="trailing" id="XK8-8C-fdx"/>
                                     <constraint firstAttribute="bottom" secondItem="YvC-ZQ-gSl" secondAttribute="bottom" id="YLO-cn-r41"/>
                                     <constraint firstItem="YvC-ZQ-gSl" firstAttribute="leading" secondItem="x56-mr-Y17" secondAttribute="leading" id="aME-2v-LiA"/>
                                     <constraint firstItem="W5G-q1-hoz" firstAttribute="top" secondItem="x56-mr-Y17" secondAttribute="top" id="c3r-q7-kie"/>
@@ -70,6 +70,9 @@
                                     <action selector="didTapReloadButton:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="nJJ-hy-Sxb"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Bpw-2O-Hlh">
+                                <rect key="frame" x="197" y="597" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,14 +82,17 @@
                             <constraint firstItem="NLt-vv-Erz" firstAttribute="top" secondItem="x56-mr-Y17" secondAttribute="bottom" constant="80" id="Nmf-6q-jdM"/>
                             <constraint firstItem="cyA-VE-fnu" firstAttribute="centerX" secondItem="UXt-j1-8NN" secondAttribute="centerX" id="QWD-AB-FNv"/>
                             <constraint firstItem="x56-mr-Y17" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UG8-9Y-Ih3"/>
+                            <constraint firstItem="Bpw-2O-Hlh" firstAttribute="top" secondItem="x56-mr-Y17" secondAttribute="bottom" constant="35" id="UH9-qZ-ckL"/>
                             <constraint firstItem="x56-mr-Y17" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WEU-UJ-uW6"/>
                             <constraint firstItem="x56-mr-Y17" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="cjD-Jl-fxg"/>
+                            <constraint firstItem="Bpw-2O-Hlh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tZK-B5-sSQ"/>
                         </constraints>
                         <connections>
                             <outlet property="closeButton" destination="NLt-vv-Erz" id="VoH-cx-g7j"/>
                             <outlet property="maxTemperatureLabel" destination="UXt-j1-8NN" id="XZT-N5-IhQ"/>
                             <outlet property="minTemperatureLabel" destination="YvC-ZQ-gSl" id="6j4-D9-OI6"/>
                             <outlet property="reloadButton" destination="cyA-VE-fnu" id="MaJ-rb-SLe"/>
+                            <outlet property="weatherActivityIndicatorView" destination="Bpw-2O-Hlh" id="RqO-Bs-N46"/>
                             <outlet property="weatherImageView" destination="W5G-q1-hoz" id="dXl-7W-3SV"/>
                         </connections>
                     </view>
