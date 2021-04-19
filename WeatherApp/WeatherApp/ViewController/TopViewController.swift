@@ -35,6 +35,7 @@ extension TopViewController {
 // MARK: - BaseView Delegate Method
 extension TopViewController: TopBaseViewDelegate {
     func didTapReloadButton() {
+        self.baseView.startActivityIndicator()
         self.viewModel.getWeatherInfo()
     }
     func didTapCloseButton() {
@@ -47,11 +48,13 @@ extension TopViewController: TopViewModelDelegate {
         DispatchQueue.main.async {
             self.baseView.setWeatherImageView(weather: self.viewModel.weather)
             self.baseView.setTemperature(weather: self.viewModel.weather)
+            self.baseView.endActivityIndicator()
         }
     }
     func didFailedWeatherInfo(errorMessage: String) {
         print("DEBUG: ", errorMessage)
         DispatchQueue.main.async {
+            self.baseView.endActivityIndicator()
             UIAlertController.showAlert(style: .alert, viewController: self, title: errorMessage, message: nil, okButtonTitle: "OK", cancelButtonTitle: nil)
         }
     }

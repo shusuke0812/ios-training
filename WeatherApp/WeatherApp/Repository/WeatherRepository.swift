@@ -60,6 +60,8 @@ extension WeatherRepository {
                     } catch {
                         completion(.failure(WeatherError.jsonDecodeError))
                     }
+                } else {
+                    completion(.failure(WeatherError.unknownError))
                 }
             }
         }
