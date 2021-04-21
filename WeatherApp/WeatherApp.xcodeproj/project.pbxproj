@@ -22,6 +22,7 @@
 		9C8E429A2623F5EB00B99DC4 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E42992623F5EB00B99DC4 /* Weather.swift */; };
 		9C8E429F2623F67000B99DC4 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E429E2623F67000B99DC4 /* WeatherError.swift */; };
 		9C8E42A42623F78400B99DC4 /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8E42A32623F78400B99DC4 /* WeatherRepository.swift */; };
+		9C9876EA2630499D00CAE550 /* TopViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9876E92630499D00CAE550 /* TopViewControllerTests.swift */; };
 		9C9E910C26281911002ADEC7 /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9E910B26281911002ADEC7 /* TopViewModel.swift */; };
 		9CBF9EEF2629906000A1EF0A /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF9EEE2629906000A1EF0A /* UIAlertController+Extension.swift */; };
 		9CD5656D262B8E2000C9A8E3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5656C262B8E2000C9A8E3 /* RootViewController.swift */; };
@@ -66,6 +67,7 @@
 		9C8E42992623F5EB00B99DC4 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9C8E429E2623F67000B99DC4 /* WeatherError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherError.swift; sourceTree = "<group>"; };
 		9C8E42A32623F78400B99DC4 /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
+		9C9876E92630499D00CAE550 /* TopViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewControllerTests.swift; sourceTree = "<group>"; };
 		9C9E910B26281911002ADEC7 /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		9CBF9EEE2629906000A1EF0A /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		9CD5656C262B8E2000C9A8E3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				9C02E5412622FFD10022AB46 /* WeatherAppTests.swift */,
 				9C02E5432622FFD10022AB46 /* Info.plist */,
+				9C9876E92630499D00CAE550 /* TopViewControllerTests.swift */,
 			);
 			path = WeatherAppTests;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9876EA2630499D00CAE550 /* TopViewControllerTests.swift in Sources */,
 				9C02E5422622FFD10022AB46 /* WeatherAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
